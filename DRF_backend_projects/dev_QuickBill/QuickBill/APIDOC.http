@@ -1,0 +1,51 @@
+# creating admin token
+POST http://127.0.0.1:8000/api/token/
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "admin123"
+}
+###
+# adding customer
+
+POST http://127.0.0.1:8000/customer/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczMTEyOTU4LCJpYXQiOjE3NzMxMTI2NTgsImp0aSI6ImY4MWY4ZDBiYTk4YTQ3NWNhYWMwNmM4MmRmNDQ3NjM0IiwidXNlcl9pZCI6IjIifQ.BWWHjpc45ardmbeIs4LgPvPknJLtoLtWfsAtkU8pPQo
+
+{
+    "name": "Arjun Kumar",
+    "phone": "9847012345",
+    "email": "arjun.kumar@yahoo.com",
+    "address": "Kollam, Kerala"
+}
+
+###
+# for listing customers
+GET http://127.0.0.1:8000/customer/
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczMTEyNTY5LCJpYXQiOjE3NzMxMTIyNjksImp0aSI6ImNmN2NjOTA3YjY0NjQ4Y2I4MjhlYTYxYjIyMGRjNmY2IiwidXNlcl9pZCI6IjEifQ.F5Yt0uPcRJ0BL5EaI-FX5fS3ae7u6EpJ8wxWrRlN3oM
+
+###
+# for retrieving customer
+GET http://127.0.0.1:8000/customer/3/
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczMTEyOTU4LCJpYXQiOjE3NzMxMTI2NTgsImp0aSI6ImY4MWY4ZDBiYTk4YTQ3NWNhYWMwNmM4MmRmNDQ3NjM0IiwidXNlcl9pZCI6IjIifQ.BWWHjpc45ardmbeIs4LgPvPknJLtoLtWfsAtkU8pPQo
+
+###
+# Update api for customer
+PUT  http://127.0.0.1:8000/customer/3/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczMTEzMjE1LCJpYXQiOjE3NzMxMTI5MTUsImp0aSI6Ijg3YThjOWI0YzYxNjQ2ODc4YTE4NDcyNjUwZDFjNjE2IiwidXNlcl9pZCI6IjEifQ.wCm1hL3ekRBwf-RSoGndJgTUbtIXE52-5FQbZKUT1wo
+
+{
+    "name": "Arjun Kumar",
+    "phone": "9847012715"
+
+}
+
+###
+
+# delete api for customer
+DELETE http://127.0.0.1:8000/customer/1/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczMTEzMzE4LCJpYXQiOjE3NzMxMTMwMTgsImp0aSI6ImZmNTJhODBmY2FmMDRlZGQ5ZGIyZmU3NGExNDlmYWM0IiwidXNlcl9pZCI6IjIifQ.HqKaQv2jNxTgIVyL3x8jnuok0DYhmghAFLz7JlxyUNI

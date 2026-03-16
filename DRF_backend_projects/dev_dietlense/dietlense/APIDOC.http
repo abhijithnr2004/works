@@ -1,0 +1,131 @@
+#=================User==============
+
+# api call for creating user account
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username":"html5",
+    "email":"html5@gmail.com",
+    "password":"Password@123",
+    "phone":96789700
+}
+
+# Api call getting token
+###
+POST http://127.0.0.1:8000/token/
+Content-Type: application/json
+
+{
+    "username":"html5",
+    "password":"Password@123"
+}
+
+#Api call creating userprofile 
+###
+POST http://127.0.0.1:8000/profile/
+Content-Type: application/json
+Authorization: Token 649681a5489dfa3dd8532cb3e489f2554e436a43
+
+{
+    "height" : 170,
+    "weight" : 50,
+    "age" : 20,
+    "gender" : "female"  
+}
+
+# Api call for retrieving user profile
+###
+GET  http://127.0.0.1:8000/profile/4/
+Content-Type: application/json
+Authorization: Token 649681a5489dfa3dd8532cb3e489f2554e436a43
+
+# Api call for updating user profile
+###
+PUT  http://127.0.0.1:8000/profile/1/
+Content-Type: application/json
+Authorization: Token ba8438b18b50f894ff0a05bc28544c240b06fe3e
+
+{
+    "height": 158.0,
+    "weight": 46.0,
+    "age": 21,
+    "gender": "male",
+    "activity_level": "1.2"
+}
+
+# Api call for retrieving a user 
+###
+GET http://127.0.0.1:8000/user/1/
+Accept: application/json
+Authorization: Token 649681a5489dfa3dd8532cb3e489f2554e436a43
+
+# Api call for adding foodlog
+###
+POST  http://127.0.0.1:8000/foodlog/
+Content-Type:  application/json
+Authorization: Token 99e2cd588e72b5d81bbc3ee6d44ccdf5066531c8
+
+{
+    "name" : "meal",
+    "meal_type" : "lunch",
+    "calories" : 300,
+    "serving_size" : "400 grams"
+}
+
+
+# Api call for listing foodlog of a user
+###
+GET  http://127.0.0.1:8000/foodlog/
+Accept: application/json
+Authorization: Token 99e2cd588e72b5d81bbc3ee6d44ccdf5066531c8
+
+# Api call for listing foodlog of a user
+###
+GET  http://127.0.0.1:8000/foodlog/1/
+Accept: application/json
+Authorization: Token 99e2cd588e72b5d81bbc3ee6d44ccdf5066531c8
+
+# Api call for updating foodlog
+###
+PUT http://127.0.0.1:8000/foodlog/1/
+Content-Type:  application/json
+Authorization: Token ba8438b18b50f894ff0a05bc28544c240b06fe3e
+
+{
+    "name" : "idly",
+    "meal_type" : "breakfast",
+    "calories" : 200,
+    "serving_size" : "3"
+}
+
+# Api call for deleting a foodlog
+###
+DELETE http://127.0.0.1:8000/foodlog/2/
+Authorization: Token 99e2cd588e72b5d81bbc3ee6d44ccdf5066531c8
+
+# Api call for summary of a user
+###
+GET http://127.0.0.1:8000/summary/
+Accept: application/json
+Authorization: Token 649681a5489dfa3dd8532cb3e489f2554e436a43
+
+# API call for getting diet_plan
+### 
+
+POST  http://127.0.0.1:8000/diet-plan/
+Content-Type:  application/json
+Authorization: Token 649681a5489dfa3dd8532cb3e489f2554e436a43
+
+{
+    "goal" : "weight gain",
+    "target_weight" : 65,
+    "duration" : 4
+}
+
+# restclient
+
+
+
+
+

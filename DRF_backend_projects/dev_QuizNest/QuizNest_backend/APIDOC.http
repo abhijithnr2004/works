@@ -1,0 +1,164 @@
+# signup
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username" : "javascript",
+    "email": "javascript@gmail.com",
+    "password": "Password@123",  
+    "phone": "9345674357"
+}
+
+# api call for token
+###
+POST http://127.0.0.1:8000/token/
+Content-Type: application/json
+
+{
+    "username":"javascript@gmail.com",
+    "password":"Password@123"
+}
+
+# api call for creating language
+###
+POST http://127.0.0.1:8000/language/
+Content-Type: application/json
+Authorization: Token 4856a485302b6987cb955ffa8ed7669c6d6bc586 
+
+{
+    "name" : "HTML"
+}
+
+# api call for listing language
+###
+GET http://127.0.0.1:8000/language/
+Accept: application/json
+Authorization: Token 4856a485302b6987cb955ffa8ed7669c6d6bc586 
+
+# api call for creating quiz
+###
+POST http://127.0.0.1:8000/quiz/
+Content-Type: application/json
+Authorization: Token 4856a485302b6987cb955ffa8ed7669c6d6bc586 
+
+{
+    "language" : 2, 
+    "level" : 3,
+    "is_published" : false
+}
+
+# api call for listing quiz
+###
+GET http://127.0.0.1:8000/quiz/
+Accept: application/json
+Authorization: Token 4856a485302b6987cb955ffa8ed7669c6d6bc586 
+
+# api call for creating question
+###
+POST http://127.0.0.1:8000/questions/3/
+Content-Type: application/json
+Authorization: Token 4856a485302b6987cb955ffa8ed7669c6d6bc586
+
+{
+    "title" : "which is a python framework1"
+}
+
+# api call for creating choice
+###
+POST http://127.0.0.1:8000/choice/7/
+Content-Type: application/json
+Authorization: Token 4856a485302b6987cb955ffa8ed7669c6d6bc586
+
+{
+  "option": "django3",
+  "is_correct": true
+}
+
+# api call for retrieving quiz
+###
+GET http://127.0.0.1:8000/get-quiz/3/
+Accept: application/json
+Authorization: Token 4856a485302b6987cb955ffa8ed7669c6d6bc586 
+
+# api call for deleting quiz
+###
+DELETE  http://127.0.0.1:8000/quiz/2/
+Accept: application/json
+Authorization: Token 4856a485302b6987cb955ffa8ed7669c6d6bc586 
+
+# api call for updating quiz
+###
+PUT  http://127.0.0.1:8000/quiz/3/
+Content-Type: application/json
+Authorization: Token 4856a485302b6987cb955ffa8ed7669c6d6bc586 
+
+{
+"level": 1,
+"is_published": true,
+"language": 6
+}
+
+# api call for updating question
+###
+PUT http://127.0.0.1:8000/questionsUpdateorDelete/5/
+Content-Type: application/json
+Authorization: Token 4856a485302b6987cb955ffa8ed7669c6d6bc586 
+
+{
+"title": "which is a python framework(Updated...)"
+}
+
+# api call for deleting question
+###
+DELETE  http://127.0.0.1:8000/questionsUpdateorDelete/6/
+Accept:  application/json
+Authorization: Token 4856a485302b6987cb955ffa8ed7669c6d6bc586 
+
+# api call for updating choice
+###
+PUT http://127.0.0.1:8000/choiceUpdateorDelete/16/
+Content-Type: application/json
+Authorization: Token 4856a485302b6987cb955ffa8ed7669c6d6bc586 
+
+{
+    "option": "Django Rest"
+}
+
+# api call for deleting choice
+###
+DELETE  http://127.0.0.1:8000/choiceUpdateorDelete/5/
+Accept:  application/json
+Authorization: Token 4856a485302b6987cb955ffa8ed7669c6d6bc586 
+
+# api call for starting quiz
+###
+POST http://127.0.0.1:8000/quiz/1/start/
+Content-Type: application/json
+Authorization: Token 4856a485302b6987cb955ffa8ed7669c6d6bc586 
+
+# api call for user to answer question in quiz
+###
+POST http://127.0.0.1:8000/attempt/5/answer/
+Content-Type: application/json
+Authorization: Token 4856a485302b6987cb955ffa8ed7669c6d6bc586 
+
+{
+  "question": 2,
+  "selected_choice": 8
+}   
+
+
+#api call for submiting quiz
+###
+###
+PUT http://127.0.0.1:8000/attempt/5/submit/
+Content-Type: application/json
+Authorization: Token 4856a485302b6987cb955ffa8ed7669c6d6bc586
+
+# filtering,pagination,throtling
+
+
+
+
+
+
