@@ -1,0 +1,65 @@
+# api call for signup
+###
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username":"user4",
+    "email":"user3@gamil.com",
+    "password":"user123"
+}
+
+
+# api call for create lead
+###
+POST http://127.0.0.1:8000/lead/
+Content-Type: application/json
+Authorization: Basic user3:user123
+
+{
+    "name": "Fathima Beevi",
+    "email": "fathima.b@example.org",
+    "phone": "9562123489",
+    "source": "Website"
+  }
+
+# api call for list leads
+###
+GET http://127.0.0.1:8000/lead/
+Accept: application/json
+Authorization: Basic user:user123
+
+
+
+# api call for retreive lead
+###
+GET http://127.0.0.1:8000/lead/1/
+Accept: application/json
+Authorization: Basic user:user123
+
+
+# api call for update lead
+###
+PUT http://127.0.0.1:8000/lead/1/
+Content-Type: application/json
+Authorization: Basic user:user123
+
+{
+    "name": "Rahul Sharma",
+    "email": "rahul.v@example.com",
+    "phone": "9876543210",
+    "source": "Website",
+    "status": "Contacted"
+}
+
+# api call for delete lead
+###
+DELETE http://127.0.0.1:8000/lead/5/
+Authorization: Basic user:user123
+
+
+# api call for lead summary
+###
+GET http://127.0.0.1:8000/summary/
+Accept: application/json
+Authorization: Basic user:user123

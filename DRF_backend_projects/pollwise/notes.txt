@@ -1,0 +1,11 @@
+related name attribute is used for reverse referencing
+
+for eg : 
+
+    poll_instance = Poll.objects.get(id=1)
+
+    choices_objects=Choice.objects.filter(poll_object=poll_instance)
+
+    poll_instance.choices.all() reverse referencing 
+
+    

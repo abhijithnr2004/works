@@ -1,0 +1,58 @@
+# api call for create job
+###
+POST http://127.0.0.1:8000/job/
+Content-Type: application/json
+
+{
+    "title": "Machine Learning",
+    "company": "Future Vision",
+    "location": "Thrissur",
+    "job_type": "Remote",
+    "experience": 2,
+    "salary": -13,
+    "skills": "PyTorch, TensorFlow, Scikit-learn, C++",
+    "is_remote": true,
+    "is_active": true
+
+}
+
+
+
+# api call for list jobs
+###
+GET http://127.0.0.1:8000/job/
+Accept: application/json
+
+
+# api call for retrieve job
+###
+GET http://127.0.0.1:8000/job/3/
+Accept: application/json
+
+
+
+# api call for update
+###
+PUT http://127.0.0.1:8000/job/3/
+Content-Type: application/json
+
+{
+  "title": "Data Science",
+  "company": "DataStream AI",
+  "location": "Boston, MA",
+  "job_type": "Full-time",
+  "experience": 3,
+  "salary": 47000,
+  "skills": "Python, R, SQL, Pandas",
+  "is_remote": false,
+  "is_active": true
+}
+
+
+# api call for delete movie
+###
+DELETE http://127.0.0.1:8000/job/6/
+
+
+
+

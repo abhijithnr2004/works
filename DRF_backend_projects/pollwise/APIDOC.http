@@ -1,0 +1,80 @@
+# api call for signup
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username":"user2",
+    "password":"user123",
+    "email":"user@gmail.com",
+    "phone":"8989765431"
+}
+
+
+# api call for token
+###
+POST http://127.0.0.1:8000/token/
+Content-Type: application/json
+
+{
+    "username":"user2",
+    "password":"user123"
+}
+
+
+
+
+# api call for create poll
+###
+POST http://127.0.0.1:8000/polls/
+Content-Type: application/json
+Authorization: Token ad2fe8ed8717ef39328d50ca4f1780b63b7c0559
+
+{
+    "question":"Select quantity"
+}
+
+
+
+# api call for list all polls
+###
+GET http://127.0.0.1:8000/polls/
+Accept: application/json
+Authorization: Token ad2fe8ed8717ef39328d50ca4f1780b63b7c0559
+
+
+# api call for retrieve poll
+###
+GET http://127.0.0.1:8000/polls/3/
+Accept: application/json
+Authorization: Token ad2fe8ed8717ef39328d50ca4f1780b63b7c0559
+
+
+# api call for delete poll
+###
+DELETE http://127.0.0.1:8000/polls/1/remove/
+Authorization: Token ad2fe8ed8717ef39328d50ca4f1780b63b7c0559
+
+
+
+# api call for create choice    
+###
+POST http://127.0.0.1:8000/polls/2/add-choice/
+Content-Type: application/json
+Authorization: Token d89354ae1c027812b44e05249acab3aad1e7eafc
+
+{
+    "option":"no"
+}
+
+
+# api call for vote
+###
+POST http://127.0.0.1:8000/polls/3/vote/
+Content-Type: application/json
+Authorization: Token d89354ae1c027812b44e05249acab3aad1e7eafc
+
+{
+    "choice_object":2
+}
+
+

@@ -1,0 +1,57 @@
+# api call for singup
+
+###
+POST http://127.0.0.1:8000/register/ 
+Content-Type: application/json
+
+{
+    "username":"javascript",
+    "password":"Password@123",
+    "email":"js@gmail.com"
+}
+
+
+###
+POST http://127.0.0.1:8000/tasks/
+Content-Type: application/json
+Authorization: Basic django:Password@123
+
+{
+    "title" : "emi",
+    "category" : "personal",
+    "priority" : 3
+}
+
+# listing
+###
+GET http://127.0.0.1:8000/tasks/
+Content-Type: application/json
+Authorization: Basic django:Password@123
+
+#retrieve
+###
+GET http://127.0.0.1:8000/tasks/1/
+Content-Type: application/json
+Authorization: Basic javascript:Password@123
+
+#delete 
+###
+DELETE  http://127.0.0.1:8000/tasks/3/
+Content-Type: application/json
+Authorization: Basic django:Password@123
+
+#update
+###
+PUT http://127.0.0.1:8000/tasks/1/
+Content-Type: application/json
+Authorization: Basic javascript:Password@123
+
+{
+  "id": 1,
+  "title": "updated school fee",
+  "created_at": "2026-02-02T04:11:23.078019Z",
+  "category": "personal",
+  "priority": 3,
+  "completed_status": "true",
+  "owner": 4
+}

@@ -1,0 +1,11 @@
+image = m.imf(upload_to = "folder_name",null=true,blank=true) 
+folder created automatically on the first image upload
+null=true used for setting null value in database
+blank =true used for setting null value in form(frontend/UI)
+
+models
+
+User model
+
+Post model(id,title,owner,created_at,img)
+comment model(id,message,owner,post,created_at)

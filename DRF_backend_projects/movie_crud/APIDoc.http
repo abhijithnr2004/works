@@ -1,0 +1,79 @@
+# api call for create movies
+POST http://127.0.0.1:8000/movie/
+Content-Type: application/json
+Authorization: Basic user:password@123
+
+{
+    "title": "ARM",
+    "year": "2025",
+    "language": "malayalam",
+    "genre": "sci-fi",
+    "director": "domenic",
+    "run_time": 10
+}
+
+
+# api call for list movies
+###
+GET http://127.0.0.1:8000/movie/
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcyNDM1NDM4LCJpYXQiOjE3NzI0MzUxMzgsImp0aSI6ImJhNDYxMDdmYzcxYzRhNzc5YzhhNjQyOTIzODE3MDc0IiwidXNlcl9pZCI6IjEifQ.fH9OUioBKKDVSMYad1CHe6iRXlesgj4wMz1t7r_AVjg
+
+
+# api  call for retrieve movie
+###
+GET http://127.0.0.1:8000/movie/2/
+Accept: application/json
+
+
+
+# api call for update movie
+###
+PUT http://127.0.0.1:8000/movie/1/
+Content-Type: application/json
+
+{
+  "title": "Minnal Murali",
+  "year": "2023",
+  "language": "malayalam",
+  "genre": "action",
+  "run_time": 50,
+  "director": "Basil Joseph"
+}
+
+
+
+# api call for delete movie
+###
+DELETE http://127.0.0.1:8000/movie/5/
+
+### 
+POST http://127.0.0.1:8000/signup/
+Content-Type: application/json
+
+{
+  "username" :"user",
+  "first_name":"u",
+  "last_name":"s",
+  "email" : "user@gmail.com",
+  "password" : "password@123"
+}
+
+#api call for creating jwt token 
+###
+POST http://127.0.0.1:8000/token/
+Content-Type: application/json
+
+{
+  "username" : "user",
+  "password" : "password@123"
+}
+
+#api call for refresh
+###
+POST http://127.0.0.1:8000/token/refresh/
+Content-Type: application/json
+
+{
+  "refresh" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc3MjUyMTMxOCwiaWF0IjoxNzcyNDM0OTE4LCJqdGkiOiI5ZGNiZTFlNDYzZGY0YTA5OTQ1YzcxNTkwNGI3Y2ZkNyIsInVzZXJfaWQiOiIxIn0.kD2AdG6KQQ7Z7947kCwkaCbGqTIi1JZvIP9XCf8re2w"
+}

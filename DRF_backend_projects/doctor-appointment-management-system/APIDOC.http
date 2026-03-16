@@ -1,0 +1,73 @@
+# api call for register user
+###
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username":"user4",
+    "email":"user@gmail.com",
+    "password":"user123"
+}
+
+
+# api call for login
+###
+POST http://127.0.0.1:8000/token/
+Content-Type: application/json
+
+{
+    "username":"user2",
+    "password":"user123"
+}
+
+
+# api call for add appointment
+###
+POST http://127.0.0.1:8000/appointments/
+Content-Type: application/json
+Authorization: Token 34d94542a2a9827b3aa04651a158c1c86a02a44f
+
+{
+  "patient_name": "Babu Bwoy",
+    "doctor_name": "Dr. Manoj Thrissur",
+    "department": "Dermatology",
+    "appointment_date": "2026-03-19",
+    "appointment_time": "15:30:00"
+  }
+
+
+
+# api call for list appointmnet
+###
+GET http://127.0.0.1:8000/appointments/
+Accept: application/json
+Authorization: Token 34d94542a2a9827b3aa04651a158c1c86a02a44f
+
+
+# api call for retrieve appointmnet
+###
+GET http://127.0.0.1:8000/appointments/9/
+Accept: application/json
+Authorization: Token 34d94542a2a9827b3aa04651a158c1c86a02a44f
+
+
+# api call for update appointment
+###
+PUT http://127.0.0.1:8000/appointments/9/
+Content-Type: application/json
+Authorization: Token 34d94542a2a9827b3aa04651a158c1c86a02a44f
+
+{
+     "patient_name": "Aditya Krishna",
+  "doctor_name": "Dr. Reena Mary",
+  "department": "Pediatrics",
+  "appointment_date": "2026-02-19",
+  "appointment_time": "09:00:00",
+  "status": "Completed"
+}
+
+
+# api call for delete appointmnet
+###
+DELETE http://127.0.0.1:8000/appointments/5/
+Authorization: Token f5c488091491992713722b0130055bd54ea12d96
