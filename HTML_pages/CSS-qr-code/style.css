@@ -1,0 +1,16 @@
+.card{
+    border: 2px solid black;
+    width: 50%;
+}
+
+.card-image{
+    width: 100%;
+}
+
+.card-head{
+    text-align: center;
+}
+
+.text-primary{
+    color: blue;
+}

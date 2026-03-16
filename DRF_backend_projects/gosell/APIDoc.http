@@ -1,0 +1,64 @@
+# api call for singup
+
+###
+POST http://127.0.0.1:8000/signup/ 
+Content-Type: application/json
+
+{
+    "username":"user1",
+    "email":"user@gmail.com",
+    "password":"Password@123"
+    
+}
+
+# create
+###
+POST http://127.0.0.1:8000/vehicles/
+Content-Type: application/json
+Authorization: Basic user1:Password@123
+
+{
+      "name": "Nexon EV",
+      "model": 2023,
+      "brand": "Tata",
+      "fule_type": "ev",
+      "owner_condition": 1,
+      "color": "Teal",
+      "price": 1450000,
+      "running_km": 8000
+}
+
+#list
+###
+GET http://127.0.0.1:8000/vehicles/
+Accept : application/json
+Authorization: Basic user:Password@123
+
+#Retrieve
+###
+GET http://127.0.0.1:8000/vehicles/3/
+Accept : application/json
+Authorization: Basic user1:Password@123
+
+#update 
+###
+PUT http://127.0.0.1:8000/vehicles/3/
+Content-Type: application/json
+Authorization: Basic user1:Password@123
+
+{
+  "name": "i20",
+  "model": 2022,
+  "brand": "Hyundai",
+  "fule_type": "petrol",
+  "owner_condition": 2,
+  "color": "White",
+  "price": 720000,
+  "running_km": 12000,
+  "owner": 2
+}
+
+#delete
+###
+DELETE  http://127.0.0.1:8000/vehicles/2/
+Authorization: Basic user:Password@123

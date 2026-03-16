@@ -1,0 +1,13 @@
+def unique_list(items):
+    seen = set()      
+    result = []       
+
+    for item in items:
+        if item not in seen:
+            seen.add(item)
+            result.append(item)
+    
+    return result
+
+nums = [1, 2, 2, 3, 4, 4, 5]
+print(unique_list(nums))

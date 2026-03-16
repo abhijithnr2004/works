@@ -1,0 +1,21 @@
+
+.card{
+
+    border: 1px transparent black;
+    text-align: center;
+    width: 50%;
+   margin-left: 25%;
+
+}
+
+.card-image{
+    width: 50%;
+}
+
+.text-primary{
+    color: blue;
+}
+
+.text-black{
+    color: black;
+}

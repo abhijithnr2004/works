@@ -1,0 +1,138 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+}
+.nav-items{
+    display: flex;
+    width: 30%;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.nav-items>li:hover{
+    text-shadow: 2px 2px 2px grey;
+}
+.nav-item{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.brand{
+    font-size: 32px;
+    font-weight: bold;
+    font-style:italic;
+}
+.cart-btn{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 120px;
+    padding:10px;
+    border-radius: 7px;
+    background-color: white;
+    border: 1px solid black;
+}
+.cart-btn:hover{
+    background-color: black;
+    color: white;
+}
+.badge{
+   background-color: black;
+   color: white; 
+   border-radius: 50%;
+   padding:0 3px;
+}
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color: rgb(17, 16, 16);
+    color: white;
+}
+.banner>.banner-text{
+    text-align: center;
+}
+.banner>.banner-text>h1{
+    font-size: 45px;
+    font-weight: 900;
+    margin: 5px;
+}
+.banner>.banner-text>span{
+    color:gray;
+    font-size: 20px;
+}
+
+.card-image{
+    width: 100%;
+    height: 180px;
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
+.card{
+    position: relative;
+    width: 20%;
+    min-height: 300px;
+    border: 1px solid black;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.view-btn{
+    width: 100px;
+    padding: 6px;
+    border-radius: 5px;
+    margin: 10px 0;
+    transition: transform 0.2s ease-out;
+
+}
+.view-btn:hover{
+    background: #000;
+    color: white;
+    transform: translate(0px,-50px) scale(70%);
+}
+
+.footer{
+    margin-top: 20px;
+    width: 100%;
+    background-color: black;
+    color: aliceblue;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.badge2{
+    background-color: black;
+    color: aliceblue;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 5px;
+    
+}
